@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #667eea;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.add-form-container {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="file"]:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-danger {
+    background: #f44336;
+    color: white;
+    padding: 8px 16px;
+    font-size: 0.9em;
+}
+
+.btn-danger:hover {
+    background: #d32f2f;
+}
+
+#form-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+#form-message.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    display: block;
+}
+
+#form-message.error {
+    background: #ffebee;
+    color: #c62828;
+    display: block;
+}
+
+.songs-list-container {
+    margin-top: 40px;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 1.1em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background: #f5f5f5;
+}
+
+.links {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.links a {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border: 2px solid #667eea;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.links a:hover {
+    background: #667eea;
+    color: white;
+}

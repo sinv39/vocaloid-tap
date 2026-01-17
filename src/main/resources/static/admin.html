@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>连音成歌 - 管理</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>歌曲管理</h1>
+        
+        <div class="add-form-container">
+            <h2>添加新歌曲</h2>
+            <form id="add-song-form">
+                <div class="form-group">
+                    <label for="title">歌名:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="melody">旋律（简谱，如: 1234567）:</label>
+                    <input type="text" id="melody" name="melody" required 
+                           pattern="[1-7]+" 
+                           placeholder="只允许输入1-7的数字">
+                </div>
+                
+                <div class="form-group">
+                    <label for="audioFile">音频文件 (MP3):</label>
+                    <input type="file" id="audioFile" name="audioFile" 
+                           accept="audio/mpeg,audio/mp3" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">添加歌曲</button>
+            </form>
+            <div id="form-message"></div>
+        </div>
+        
+        <div class="songs-list-container">
+            <h2>歌曲列表</h2>
+            <div id="loading" class="loading">加载中...</div>
+            <table id="songs-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>歌名</th>
+                        <th>旋律</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="songs-tbody">
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="links">
+            <a href="/index.html">返回游戏</a>
+        </div>
+    </div>
+    
+    <script src="/js/admin.js"></script>
+</body>
+</html>
