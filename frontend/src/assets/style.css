@@ -14,20 +14,24 @@ body {
     padding: 20px;
 }
 
+#app {
+    width: 100%;
+    max-width: 800px;
+}
+
 .container {
     background: white;
     border-radius: 20px;
     padding: 40px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    max-width: 800px;
-    width: 100%;
     text-align: center;
 }
 
 h1 {
-    color: #667eea;
+    color: #333;
     margin-bottom: 30px;
     font-size: 2.5em;
+    font-weight: bold;
 }
 
 .notes-container {
@@ -41,25 +45,32 @@ h1 {
 .note-btn {
     width: 80px;
     height: 80px;
-    font-size: 2em;
-    font-weight: bold;
     border: none;
     border-radius: 50%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-size: 2em;
+    font-weight: bold;
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .note-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .note-btn:active {
-    transform: scale(0.95);
+    transform: translateY(0);
 }
+
+.note-btn[data-note="1"] { background: linear-gradient(135deg, #ff6b6b, #ee5a6f); }
+.note-btn[data-note="2"] { background: linear-gradient(135deg, #ffa500, #ff8c00); }
+.note-btn[data-note="3"] { background: linear-gradient(135deg, #ffd700, #ffb347); }
+.note-btn[data-note="4"] { background: linear-gradient(135deg, #32cd32, #228b22); }
+.note-btn[data-note="5"] { background: linear-gradient(135deg, #1e90ff, #0066cc); }
+.note-btn[data-note="6"] { background: linear-gradient(135deg, #9370db, #7b68ee); }
+.note-btn[data-note="7"] { background: linear-gradient(135deg, #ff1493, #c71585); }
 
 .input-display {
     margin: 30px 0;
@@ -69,9 +80,13 @@ h1 {
     font-size: 1.2em;
 }
 
-#current-input {
+.input-display p {
+    color: #666;
+}
+
+.input-display span {
+    color: #333;
     font-weight: bold;
-    color: #667eea;
     font-size: 1.5em;
     letter-spacing: 0.2em;
 }
@@ -79,27 +94,26 @@ h1 {
 .result-container {
     margin-top: 30px;
     padding: 20px;
-    background: #e8f5e9;
+    background: #f0f8ff;
     border-radius: 10px;
     border: 2px solid #4caf50;
 }
 
 .result-container h2 {
-    color: #2e7d32;
+    color: #333;
     margin-bottom: 15px;
 }
 
 .song-title {
     font-size: 1.5em;
+    color: #4caf50;
     font-weight: bold;
-    color: #1b5e20;
-    margin: 15px 0;
+    margin-bottom: 15px;
 }
 
-#audio-player {
+.audio-player {
     width: 100%;
-    max-width: 500px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .links {
@@ -110,14 +124,11 @@ h1 {
     color: #667eea;
     text-decoration: none;
     font-size: 1.1em;
-    padding: 10px 20px;
-    border: 2px solid #667eea;
-    border-radius: 5px;
-    display: inline-block;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .links a:hover {
-    background: #667eea;
-    color: white;
+    color: #764ba2;
+    text-decoration: underline;
 }
+
